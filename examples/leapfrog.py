@@ -3,10 +3,9 @@ from scipy.linalg import expm
 
 from qiskit.circuit.library import PauliEvolutionGate
 from qiskit.quantum_info import Statevector
-from qiskit.synthesis import SuzukiTrotter
 from qiskit_omelyan import Leapfrog2
 
-from heisenberg_model import heisenberg_chain_hamiltonian
+from models import heisenbergXXZ
 
 
 # ---------------------- Model parameters ----------------------
@@ -17,15 +16,13 @@ Jx, Jy, Jz = 1.0, 1.0, 1.0    # coupling constants
 hz = 0.1      # local field strength
 
 # 1) Build Hamiltonian
-H = heisenberg_chain_hamiltonian(n, Jx=Jx, Jy=Jy, Jz=Jz, hz=hz)
+H = heisenbergXXZ(n, Jx=Jx, Jy=Jy, Jz=Jz, hz=hz)
 print(H)
 
 # ----------------- Time evolution parameters ------------------
 
-t = 10.0     # total evolution time
-reps = 100   # number of steps
-
-# --- Synthesis parameters ---
+t = 10.0    # total evolution time
+reps = 1000    # number of steps
 merge_single = True   # Merge consecutive single-qubit gates into one
 merge_steps = True    # Merge consecutive steps
 
