@@ -10,7 +10,7 @@ authors = [
     { name="Marko Maležič" }
 ]
 dependencies = [
-    "qiskit>=2.0"
+    "qiskit>=2.4.0"
 ]
 readme = "README.md"
 requires-python = ">=3.10"
