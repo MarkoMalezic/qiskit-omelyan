@@ -4,7 +4,6 @@ from scipy.linalg import expm
 from qiskit.circuit.library import PauliEvolutionGate
 from qiskit.quantum_info import SparsePauliOp, Statevector
 from qiskit.synthesis import SuzukiTrotter
-from qiskit_omelyan import Leapfrog2, Omelyan2, Forest_Ruth4, Omelyan4, Malezic_Ostmeyer4, Yoshida6, Blanes_Moan6, Malezic_Ostmeyer6, Morales8, Morales10
 
 def heisenberg_chain_hamiltonian(
   n,
@@ -35,7 +34,7 @@ def heisenberg_chain_hamiltonian(
       if Jy != 0: two_body_term("YY", i, i + 1, Jy)
       if Jz != 0: two_body_term("ZZ", i, i + 1, Jz)
 
-  # local fields
+  # local field
   for i in range(n):
       if hz != 0: one_body_term("Z", i, hz)
 
