@@ -7,7 +7,7 @@ from qiskit_omelyan import Blanes_Moan6
 
 from model import heisenbergXXZ
 
-# This example demonstrates how to use the Leapfrog2 scheme to build
+# This example demonstrates how to use the Blanes_Moan6 scheme to build
 # a quantum circuit for time evolution under a Heisenberg XXZ Hamiltonian.
 # The script computes the fidelity and error of the evolved state compared
 # to the exact evolution using matrix exponentiation.
