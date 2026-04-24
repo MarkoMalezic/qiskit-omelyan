@@ -10,24 +10,15 @@ These examples are meant for **learning and experimentation**, not as automated 
 
 1. Install `qiskit-omelyan` (pick one):
 
-### Install from PyPI (once published)
+### Install from PyPI
 ```bash
-pip install qiskit-omelyan
+pip install "qiskit-omelyan[examples]"
 ```
 
-### Install from GitHub (development / latest `main`)
+### Install from GitHub
 ```bash
-pip install "git+https://github.com/MarkoMalezic/qiskit-omelyan.git"
+pip install "qiskit-omelyan[examples] @ git+https://github.com/MarkoMalezic/qiskit-omelyan.git"
 ```
-
-2. Install extra dependencies used by the examples:
-```bash
-pip install numpy scipy
-```
-
-> Notes:
-> - `scipy` is only used here to compute the "exact" evolution via matrix exponentiation (`scipy.linalg.expm`)
->   so we can estimate fidelity/error for small systems.
 
 ## How to run
 
