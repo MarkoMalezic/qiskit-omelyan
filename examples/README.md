@@ -1,4 +1,3 @@
-````markdown name=examples/README.md
 # Examples
 
 This directory contains **standalone example scripts** that demonstrate how to use the
@@ -69,7 +68,7 @@ python leapfrog2_circuit.py
 These scripts:
 1. Build `U(t) ≈ exp(-i t H)` using a chosen scheme
 2. Evolve an initial `Statevector`
-3. Compute the **exact** evolution using `expm(-i t H)` for small `n`
+3. Compute the **exact** evolution using `expm(-i t H)` for small `nq`
 4. Print fidelity and state-vector error
 
 Example:
@@ -80,10 +79,10 @@ python omelyan2.py
 
 ## Tips
 
-- Keep `n` small (e.g., `n=3..5`) when using the "exact evolution" scripts, because
+- Keep `nq` small (e.g., `n=3..5`) when using the "exact evolution" scripts, because
   exact matrix exponentiation scales as `2^n`.
 - Increase `reps` to improve approximation accuracy (at the cost of deeper circuits).
-- If you want to compare schemes fairly, use the same `n`, couplings, `t`, and `reps`.
+- If you want to compare schemes fairly, the cost (number of gates) must remain constant. The cost roughly scales linearly with the number of `cycles` and steps `reps` (In the examples cost = 100)
 
 ## Troubleshooting
 
@@ -109,4 +108,3 @@ pip install scipy numpy
 ## License / attribution
 
 These examples are provided as part of the `qiskit-omelyan` repository for educational use.
-````

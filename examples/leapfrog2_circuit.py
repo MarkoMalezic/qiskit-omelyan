@@ -10,13 +10,13 @@ if __name__ == "__main__":
 
     # ---------------------- Model parameters ----------------------
 
-    n = 3   # number of spins/qubits
+    nq = 3   # number of spins/qubits
 
     Jx, Jy, Jz = 1.0, 1.0, 1.0    # coupling constants
     hz = 0.1      # local field strength
 
     # 1) Build Hamiltonian
-    H = heisenbergXXZ(n, Jx=Jx, Jy=Jy, Jz=Jz, hz=hz)
+    H = heisenbergXXZ(nq, Jx=Jx, Jy=Jy, Jz=Jz, hz=hz)
     print(H)
 
     # ----------------- Time evolution parameters ------------------
