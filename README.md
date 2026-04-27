@@ -34,6 +34,10 @@ This repository includes ready-to-use schemes implemented as subclasses/instance
 - **6th order**: `Yoshida6`, `Blanes_Moan6`, `Malezic_Ostmeyer6`
 - **8th / 10th order**: `Morales8`, `Morales10`
 
+### Collection of schemes
+
+All top most efficient schemes at orders $n = 2, 4, 6$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the paper by Malezic & Ostmeyer ([arXiv: 2601.18756](https://arxiv.org/abs/2601.18756))
+
 ## Installation
 
 ### From PyPI
