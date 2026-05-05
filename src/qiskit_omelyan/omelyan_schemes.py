@@ -29,7 +29,7 @@ class Leapfrog2(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -47,7 +47,7 @@ class Leapfrog2(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -85,7 +85,7 @@ class Omelyan2(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -103,7 +103,7 @@ class Omelyan2(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -141,7 +141,7 @@ class Forest_Ruth4(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -159,7 +159,7 @@ class Forest_Ruth4(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -194,7 +194,7 @@ class Omelyan4(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -217,7 +217,7 @@ class Omelyan4(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -254,7 +254,7 @@ class Malezic_Ostmeyer4(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -279,7 +279,7 @@ class Malezic_Ostmeyer4(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -311,7 +311,7 @@ class Yoshida6(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -337,7 +337,7 @@ class Yoshida6(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -373,7 +373,7 @@ class Blanes_Moan6(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -402,7 +402,7 @@ class Blanes_Moan6(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -439,7 +439,7 @@ class Malezic_Ostmeyer6(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -472,7 +472,7 @@ class Malezic_Ostmeyer6(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -509,7 +509,7 @@ class Morales8(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -545,7 +545,7 @@ class Morales8(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
@@ -581,7 +581,7 @@ class Morales10(OmelyanTrotter):
 
     def __init__(
         self,
-        steps=1,
+        reps=1,
         merge_single=True,
         merge_steps=True,
         insert_barriers=False,
@@ -633,7 +633,7 @@ class Morales10(OmelyanTrotter):
             order=order,
             cycles=cycles,
             c_vec=c_vec,
-            steps=steps,
+            reps=reps,
             merge_single=merge_single,
             merge_steps=merge_steps,
             insert_barriers=insert_barriers,
