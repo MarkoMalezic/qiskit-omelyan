@@ -104,7 +104,7 @@ class OmelyanTrotter(ProductFormula):
         order: int,
         cycles: int,
         c_vec: list[ParameterValueType],
-        reps: int = 1,
+        steps: int = 1,
         merge_single: bool = False,
         merge_steps: bool = False,
         insert_barriers: bool = False,
@@ -123,7 +123,7 @@ class OmelyanTrotter(ProductFormula):
             order: The order of the product formula.
             cycles: The number of cycles of the product formula.
             c_vec: The parameters of a symmetric scheme in the ramp notation (len(c) = cycles)
-            reps: The number of time steps.
+            steps: The number of time steps.
             merge_single: The boolean tracking whether to merge single qubit gates if possible
             merge_steps: The boolean tracking whether to merge points where two steps meet
             insert_barriers: Whether to insert barriers between the atomic evolutions.
@@ -176,7 +176,7 @@ class OmelyanTrotter(ProductFormula):
 
         super().__init__(
             order,
-            reps,
+            steps,
             insert_barriers,
             cx_structure,
             atomic_evolution,
@@ -191,7 +191,7 @@ class OmelyanTrotter(ProductFormula):
         """Expand the Hamiltonian into an Omelyan-Trotter sequence of ramps consisting of sparse gates.
 
         For example, the Hamiltonian ``H = IX + ZZ`` for an evolution time ``t`` and
-        1 repetition for an order 2 formula would get decomposed into a list of 3-tuples
+        1 step for an order 2 formula would get decomposed into a list of 3-tuples
         containing ``(pauli, indices, rz_rotation_angle)``, that is:
 
         .. code-block:: text
@@ -202,7 +202,7 @@ class OmelyanTrotter(ProductFormula):
         of a Pauli :math:`P` over time :math:`t`, which is :math:`e^{itP}`, is represented
         by ``(P, indices, 2 * t)``.
 
-        For ``N`` repetitions, this sequence would be repeated ``N`` times and the coefficients
+        For ``N`` steps, this sequence would be repeated ``N`` times and the coefficients
         divided by ``N``.
 
         Args:
@@ -221,7 +221,7 @@ class OmelyanTrotter(ProductFormula):
                 else operator.to_sparse_list()
             )
             paulis = [
-                (pauli, indices, real_or_fail(coeff) * time * 2 / self.reps)
+                (pauli, indices, real_or_fail(coeff) * time * 2 / self.steps)
                 for pauli, indices, coeff in sparse_list
             ]
             if not self.preserve_order:
@@ -250,7 +250,7 @@ class OmelyanTrotter(ProductFormula):
 
         # Merge steps within a full product formula by adding up the angles at the point where they meet
         def merge_steps(full_paulis, step_length):
-            merge_points = range(step_length, (self.reps - 1) * step_length + 1, step_length)
+            merge_points = range(step_length, (self.steps - 1) * step_length + 1, step_length)
             for i in reversed(merge_points):
                 full_paulis[i - 1] = (
                     full_paulis[i - 1][0],
@@ -276,7 +276,7 @@ class OmelyanTrotter(ProductFormula):
         if self.merge_single:
             one_step = merge_single_qubit(one_step)
         # Extend the single step into the full product formula
-        full = self.reps * one_step
+        full = self.steps * one_step
         # Optionally merge the gates where two steps meet
         if self.merge_steps:
             full = merge_steps(full, len(one_step))
