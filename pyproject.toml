@@ -10,7 +10,7 @@ authors = [
     { name="Marko Maležič" }
 ]
 dependencies = [
-    "qiskit>=2.4.0"
+    "qiskit>=2.0.0"
 ]
 readme = "README.md"
 requires-python = ">=3.10"
@@ -24,3 +24,6 @@ where = ["src"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+
+[project.entry-points."qiskit.synthesis"]
+"PauliEvolution.omelyan_trotter" = "qiskit_omelyan.omelyan_plugin:OmelyanTrotterPlugin"
