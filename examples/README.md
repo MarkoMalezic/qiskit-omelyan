@@ -3,6 +3,7 @@
 This directory contains **standalone example scripts** that demonstrate how to use the
 `qiskit-omelyan` product-formula (Omelyan-type) schemes to build time-evolution circuits
 for a simple Heisenberg XXZ spin chain.
+In `examples/native` one finds examples that run natively inside the package, while in `examples/plugin` the similar tests are presented using the HighLevelSynthesis plugin for Qiskit.
 
 These examples are meant for **learning and experimentation**, not as automated unit tests.
 
