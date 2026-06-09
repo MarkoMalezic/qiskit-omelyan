@@ -26,4 +26,4 @@ where = ["src"]
 package-dir = {"" = "src"}
 
 [project.entry-points."qiskit.synthesis"]
-"PauliEvolution.omelyan_trotter" = "qiskit_omelyan.omelyan_plugin:PauliEvolutionSynthesis"
+"PauliEvolution.omelyan_trotter" = "qiskit_omelyan.omelyan_plugin:PauliEvolutionSynthesisOmelyan"

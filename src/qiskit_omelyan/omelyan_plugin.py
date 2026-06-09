@@ -15,7 +15,7 @@ from .omelyan_schemes import (
     Morales10,
 )
 
-class PauliEvolutionSynthesis(HighLevelSynthesisPlugin):
+class PauliEvolutionSynthesisOmelyan(HighLevelSynthesisPlugin):
     """High-level synthesis plugin for Omelyan product formulas for PauliEvolutionGate.
 
     Users can either:
