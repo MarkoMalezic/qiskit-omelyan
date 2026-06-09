@@ -16,7 +16,10 @@ from .omelyan_schemes import (
 )
 
 class PauliEvolutionSynthesisOmelyan(HighLevelSynthesisPlugin):
-    """High-level synthesis plugin for Omelyan product formulas for PauliEvolutionGate.
+    """Synthesize a :class:`.PauliEvolutionGate` using OmelyanTrotter.
+
+    This plugin name is :``PauliEvolution.omelyan_trotter`` which can be used as the key on
+    an :class:`~.HLSConfig` object to use this method with :class:`~.HighLevelSynthesis`.
 
     Users can either:
       - Specify a built-in scheme with `name` (str), or
