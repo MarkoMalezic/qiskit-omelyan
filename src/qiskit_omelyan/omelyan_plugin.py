@@ -15,7 +15,7 @@ from .omelyan_schemes import (
     Morales10,
 )
 
-class OmelyanTrotterPlugin(HighLevelSynthesisPlugin):
+class PauliEvolutionSynthesis(HighLevelSynthesisPlugin):
     """High-level synthesis plugin for Omelyan product formulas for PauliEvolutionGate.
 
     Users can either:
@@ -61,6 +61,11 @@ class OmelyanTrotterPlugin(HighLevelSynthesisPlugin):
         qubits=None,
         **options,
     ) -> QuantumCircuit:
+        if not isinstance(high_level_object, PauliEvolutionGate):
+            # Don't do anything if a gate is called "evolution" but is not an
+            # actual PauliEvolutionGate
+            return None
+        
         options = options or {}
 
         # Named/known schemes
@@ -93,7 +98,7 @@ class OmelyanTrotterPlugin(HighLevelSynthesisPlugin):
                 )
                 return scheme.synthesize(high_level_object)
             else:
-                raise ValueError(f"Scheme name '{scheme_name}' not recognized. Valid options: {list(schemes.keys())}")
+                print(f"Warning: Scheme name '{scheme_name}' not recognized. Valid options: {list(schemes.keys())}. Falling back to default scheme.")
 
         # User-supplied scheme
         if all(k in options for k in ("order", "cycles", "c_vec")):
