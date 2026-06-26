@@ -19,11 +19,9 @@ def main():
 
     print("Input circuit:")
     print(qc)
-    print()
 
     pmgr = HighLevelSynthesisPluginManager()
     print("Methods for PauliEvolution:", pmgr.method_names("PauliEvolution"))
-    print()
 
     named_schemes = ["leapfrog2", "omelyan2", "forest_ruth4", "omelyan4", "malezic_ostmeyer4",
                      "yoshida6", "blanes_moan6", "malezic_ostmeyer6", "morales8", "morales10"]

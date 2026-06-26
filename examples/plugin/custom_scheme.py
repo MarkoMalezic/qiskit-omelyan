@@ -19,11 +19,8 @@ def main():
 
     print("Input circuit:")
     print(qc)
-    print()
-
     pmgr = HighLevelSynthesisPluginManager()
     print("Methods for PauliEvolution:", pmgr.method_names("PauliEvolution"))
-    print()
 
     options = {"name": "custom_scheme",
                "order": 4,
