@@ -62,15 +62,11 @@ pip install "qiskit-omelyan[examples] @ git+https://github.com/MarkoMalezic/qisk
 
 ## Quick start
 
-Minimal example (Hamiltonian as `SparsePauliOp`):
+Prepare a small spin chain Hamiltonian (as `SparsePauliOp`) and construct the PauliEvolutionGate for some time $t$:
 
 ```python
 from qiskit.circuit.library import PauliEvolutionGate
 from qiskit.quantum_info import SparsePauliOp
-
-from qiskit_omelyan import OmelyanTrotter, Omelyan2  # or any other scheme
-
-t = 1.0
 
 H = SparsePauliOp.from_list([
     ("ZI", 1.0),
@@ -78,27 +74,65 @@ H = SparsePauliOp.from_list([
     ("XX", 0.5),
 ])
 
+t = 1.0
 evolution = PauliEvolutionGate(H, time=t)
+```
 
-# Option 1: use a ready-to-use scheme
-synth = Omelyan2(reps=50, merge_single=True, merge_steps=True)
-qc = synth.synthesize(evolution)
+To construct the evolution circuit either a HighLevelSynthesis plugin can be used to transpile it:
+
+```python
+from qiskit import QuantumCircuit
+from qiskit.transpiler import generate_preset_pass_manager
+from qiskit.transpiler.passes.synthesis import HLSConfig
+
+# Generate the circuit to be transpiled
+qc = QuantumCircuit(2)
+qc.append(evolution, [0, 1])
+
+# Option 1: use a named scheme
+options = {"name": "omelyan2",
+           "reps": 50}
+
+# Option 2: construct a custom OmelyanTrotter scheme
+options = {"order": 2,
+           "cycles": 2,
+           "c_vec": [0.19318332, 0.30681667],
+           "reps": 50}
+
+hls_config = HLSConfig(PauliEvolution=[("omelyan_trotter", options)])
+pass_manager = generate_preset_pass_manager(optimization_level=0, hls_config=hls_config)
+
+circuit = pass_manager.run(qc)
+
+print(circuit)
+```
+
+or it can be constructed natively by importing the necessary objects:
+
+```python
+from qiskit_omelyan import OmelyanTrotter, Omelyan2
+
+# Option 1: use a named scheme
+scheme = Omelyan2(reps=50)
+circuit = scheme.synthesize(evolution)
 
 # Option 2: construct a custom OmelyanTrotter
-# qc = OmelyanTrotter(order=2, cycles=1, c_vec=[...], reps=50).synthesize(evolution)
+scheme = OmelyanTrotter(order=2, cycles=2, c_vec=[0.19318332, 0.30681667], reps=50, merge_single=True, merge_=True)
+circuit = scheme.synthesize(evolution)
 
-print(qc)
+print(circuit)
 ```
 
 ## Examples
 
-See [`examples/`](./examples) and [`examples/README.md`](./examples/README.md).
+Scripts for more examples can be found in [`examples/`](./examples) for both plugin usage and native support. See [`examples/README.md`](./examples/README.md) for more information.
 
 Typical usage:
 ```bash
 cd examples
-python leapfrog2_circuit.py
-python omelyan2.py
+python native/leapfrog2_circuit.py
+python native/omelyan2.py
+python plugin/named_scheme.py
 ```
 
 Some examples compare against exact statevector evolution for small systems using `scipy.linalg.expm`, so keep the number of qubits small.
