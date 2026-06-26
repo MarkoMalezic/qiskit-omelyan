@@ -117,7 +117,7 @@ scheme = Omelyan2(reps=50)
 circuit = scheme.synthesize(evolution)
 
 # Option 2: construct a custom OmelyanTrotter
-scheme = OmelyanTrotter(order=2, cycles=2, c_vec=[0.19318332, 0.30681667], reps=50, merge_single=True, merge_=True)
+scheme = OmelyanTrotter(order=2, cycles=2, c_vec=[0.19318332, 0.30681667], reps=50)
 circuit = scheme.synthesize(evolution)
 
 print(circuit)
