@@ -1,5 +1,7 @@
 # qiskit-omelyan
 
+[![Qiskit Ecosystem](https://qisk.it/e-9d474247)](https://qisk.it/e)
+
 Omelyan-type (and related) **symmetric product formulas** for Hamiltonian time evolution in Qiskit.
 
 This project provides a general ramp-based construction, **`OmelyanTrotter`**, along with a collection of well-known optimized schemes from the literature. The goal is to give you more control over time-evolution circuit synthesis—especially when you want **lower Trotter error at fixed (or comparable) gate depth** than standard Suzuki–Trotter constructions.
@@ -36,7 +38,7 @@ This repository includes ready-to-use schemes implemented as subclasses/instance
 
 ### Collection of schemes
 
-All top most efficient schemes at orders $n = 2, 4, 6$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the paper by Malezic & Ostmeyer ([arXiv: 2601.18756](https://arxiv.org/abs/2601.18756))
+All top most efficient schemes at orders $n = 2, 4, 6$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the paper by Maležič & Ostmeyer ([arXiv: 2601.18756](https://arxiv.org/abs/2601.18756))
 
 ## Installation
 
