@@ -8,10 +8,16 @@ from .omelyan_schemes import (
     Forest_Ruth4,
     Omelyan4,
     Malezic_Ostmeyer4,
+    Malezic_Ostmeyer4_minimal,
     Yoshida6,
     Blanes_Moan6,
     Malezic_Ostmeyer6,
+    Malezic_Ostmeyer6_minimal,
     Morales8,
+    Malezic_Ostmeyer8_q21,
+    Malezic_Ostmeyer8_q21_minimal,
+    Malezic_Ostmeyer8_q25,
+    Malezic_Ostmeyer8_q30,
     Morales10,
 )
 
@@ -80,10 +86,16 @@ class PauliEvolutionSynthesisOmelyan(HighLevelSynthesisPlugin):
                 "forest_ruth4": Forest_Ruth4,
                 "omelyan4": Omelyan4,
                 "malezic_ostmeyer4": Malezic_Ostmeyer4,
+                "malezic_ostmeyer4_minimal": Malezic_Ostmeyer4_minimal,
                 "yoshida6": Yoshida6,
                 "blanes_moan6": Blanes_Moan6,
                 "malezic_ostmeyer6": Malezic_Ostmeyer6,
+                "malezic_ostmeyer6_minimal": Malezic_Ostmeyer6_minimal,
                 "morales8": Morales8,
+                "malezic_ostmeyer8_q21": Malezic_Ostmeyer8_q21,
+                "malezic_ostmeyer8_q21_minimal": Malezic_Ostmeyer8_q21_minimal,
+                "malezic_ostmeyer8_q25": Malezic_Ostmeyer8_q25,
+                "malezic_ostmeyer8_q30": Malezic_Ostmeyer8_q30,
                 "morales10": Morales10,
             }
             scheme_cls = schemes.get(scheme_name.lower())

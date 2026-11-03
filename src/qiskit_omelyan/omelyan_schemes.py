@@ -244,11 +244,13 @@ class Malezic_Ostmeyer4(OmelyanTrotter):
 
     References:
         [1]: M. Maležič and J. Ostmeyer, "Efficient Trotter–Suzuki Schemes
-             for Long-Time Quantum Dynamics", 2026.
-             `arXiv:quant-ph/2601.18756 <https://arxiv.org/abs/2601.18756>`_
+             for Long-Time Quantum Dynamics", Journal of Physics A: Mathematical and
+             Theoretical 59, 345301 (2026)
+             DOI: `10.1088/1751-8121/ae919f <https://doi.org/10.1088/1751-8121/ae919f>`_
 
     See also:
         OmelyanTrotter
+        Malezic_Ostmeyer4_minimal
         Malezic_Ostmeyer6
     """
 
@@ -274,6 +276,68 @@ class Malezic_Ostmeyer4(OmelyanTrotter):
             0.122086989386933251,
             -0.350153632343424469,
             0.124240421767020743,
+        ]
+        super().__init__(
+            order=order,
+            cycles=cycles,
+            c_vec=c_vec,
+            reps=reps,
+            merge_single=merge_single,
+            merge_steps=merge_steps,
+            insert_barriers=insert_barriers,
+            cx_structure=cx_structure,
+            atomic_evolution=atomic_evolution,
+            wrap=wrap,
+            preserve_order=preserve_order,
+            atomic_evolution_sparse_observable=atomic_evolution_sparse_observable,
+        )
+
+
+class Malezic_Ostmeyer4_minimal(OmelyanTrotter):
+    r"""Fourth-order maximal cycles scheme with minimal distance from the origin,
+    found by Maležič and Ostmeyer [1].
+
+    This is the Omelyan improved fourth-order Trotter scheme with six cycles.
+    At order n = 4, the number of cycles q = 6 is maximal, and produces
+    the most efficient schemes theoretically.
+
+    In practice, other factors affect the scheme performance, e.g. the distance
+    from the origin point, which was taken into account when choosing this scheme.
+    This scheme has the lowest distance from the origin at q = 6 cycles, which
+    comes at a cost of decreased efficiency.
+
+    References:
+        [1]: M. Maležič and J. Ostmeyer, "", 2026.
+             `arXiv:quant-ph/ <https://arxiv.org/abs/>`_
+
+    See also:
+        OmelyanTrotter
+        Malezic_Ostmeyer4
+        Malezic_Ostmeyer6_minimal
+    """
+
+    def __init__(
+        self,
+        reps=1,
+        merge_single=True,
+        merge_steps=True,
+        insert_barriers=False,
+        cx_structure="chain",
+        atomic_evolution=None,
+        wrap=False,
+        preserve_order=True,
+        *,
+        atomic_evolution_sparse_observable=False,
+    ):
+        order = 4
+        cycles = 6
+        c_vec = [
+            0.287834613619764812,
+            0.151098631207585238,
+            0.154721182891605497,
+            0.112757707574057481,
+            0.117761677709795246,
+            -0.324173813002808231,
         ]
         super().__init__(
             order=order,
@@ -429,12 +493,15 @@ class Malezic_Ostmeyer6(OmelyanTrotter):
 
     References:
         [1]: M. Maležič and J. Ostmeyer, "Efficient Trotter–Suzuki Schemes
-             for Long-Time Quantum Dynamics", 2026.
-             `arXiv:quant-ph/2601.18756 <https://arxiv.org/abs/2601.18756>`_
+             for Long-Time Quantum Dynamics", Journal of Physics A: Mathematical and
+             Theoretical 59, 345301 (2026)
+             DOI: `10.1088/1751-8121/ae919f <https://doi.org/10.1088/1751-8121/ae919f>`_
 
     See also:
         OmelyanTrotter
         Malezic_Ostmeyer4
+        Malezic_Ostmeyer6_minimal
+        Malezic_Ostmeyer8_q21
     """
 
     def __init__(
@@ -467,6 +534,76 @@ class Malezic_Ostmeyer6(OmelyanTrotter):
             -0.230821838291030424,
             -0.237197828922049295,
             0.056583981858007803,
+        ]
+        super().__init__(
+            order=order,
+            cycles=cycles,
+            c_vec=c_vec,
+            reps=reps,
+            merge_single=merge_single,
+            merge_steps=merge_steps,
+            insert_barriers=insert_barriers,
+            cx_structure=cx_structure,
+            atomic_evolution=atomic_evolution,
+            wrap=wrap,
+            preserve_order=preserve_order,
+            atomic_evolution_sparse_observable=atomic_evolution_sparse_observable,
+        )
+
+
+class Malezic_Ostmeyer6_minimal(OmelyanTrotter):
+    r"""Sixth-order maximal cycles scheme with improved efficiency,
+    found by Maležič and Ostmeyer [1].
+
+    This is the Omelyan improved sixth-order Trotter scheme with fourteen cycles.
+    At order n = 6, the number of cycles q = 14 is maximal, and produces
+    the most efficient schemes theoretically.
+
+    In practice, other factors affect the scheme performance, e.g. the distance
+    from the origin point, which was taken into account when choosing this scheme.
+    This scheme has the lowest distance from the origin at q = 14 cycles, which
+    comes at a cost of decreased efficiency.
+
+    References:
+        [1]: M. Maležič and J. Ostmeyer, "", 2026.
+             `arXiv:quant-ph/ <https://arxiv.org/abs/>`_
+
+    See also:
+        OmelyanTrotter
+        Malezic_Ostmeyer4_minimal
+        Malezic_Ostmeyer6
+    """
+
+    def __init__(
+        self,
+        reps=1,
+        merge_single=True,
+        merge_steps=True,
+        insert_barriers=False,
+        cx_structure="chain",
+        atomic_evolution=None,
+        wrap=False,
+        preserve_order=True,
+        *,
+        atomic_evolution_sparse_observable=False,
+    ):
+        order = 6
+        cycles = 14
+        c_vec = [
+            0.043704135948876253,
+            0.085971959351543434,
+            -0.140210973528653471,
+            0.235739169767919005,
+            0.098175286900802475,
+            0.094535865815963044,
+            0.078981222193509087,
+            0.068583665915761011,
+            0.082485694645635016,
+            -0.165420520751213745,
+            -0.226675480808975371,
+            0.057382351788547323,
+            0.108345004651375282,
+            0.078402618108910652,
         ]
         super().__init__(
             order=order,
@@ -540,6 +677,316 @@ class Morales8(OmelyanTrotter):
             -0.192002866507456983,
             0.280744226331782242,
             0.063916804931420539,
+        ]
+        super().__init__(
+            order=order,
+            cycles=cycles,
+            c_vec=c_vec,
+            reps=reps,
+            merge_single=merge_single,
+            merge_steps=merge_steps,
+            insert_barriers=insert_barriers,
+            cx_structure=cx_structure,
+            atomic_evolution=atomic_evolution,
+            wrap=wrap,
+            preserve_order=preserve_order,
+            atomic_evolution_sparse_observable=atomic_evolution_sparse_observable,
+        )
+
+
+class Malezic_Ostmeyer8_q21(OmelyanTrotter):
+    r"""Eighth-order Yoshida-type composite scheme at q = 21 cycles,
+    found by Maležič and Ostmeyer [1].
+
+    This is the Omelyan improved eighth-order Trotter scheme with twenty-one cycles.
+    In this region of cycles only composite schemes of Yoshida-type are allowed,
+    and this scheme is the most efficient in this region, with a small distance
+    from the origin, making it a good candidate as a general product formula.
+
+    References:
+        [1]: M. Maležič and J. Ostmeyer, "", 2026.
+             `arXiv:quant-ph/ <https://arxiv.org/abs/>`_
+
+    See also:
+        OmelyanTrotter
+        Malezic_Ostmeyer6
+        Malezic_Ostmeyer8_q21_minimal
+        Malezic_Ostmeyer8_q25
+        Malezic_Ostmeyer8_q30
+    """
+
+    def __init__(
+        self,
+        reps=1,
+        merge_single=True,
+        merge_steps=True,
+        insert_barriers=False,
+        cx_structure="chain",
+        atomic_evolution=None,
+        wrap=False,
+        preserve_order=True,
+        *,
+        atomic_evolution_sparse_observable=False,
+    ):
+        order = 8
+        cycles = 21
+        c_vec = [
+            0.041644811759980006,
+            0.082401316690625129,
+            -0.100053679877075558,
+            0.056276640904364281,
+            0.054789293427501641,
+            0.052417975744997715,
+            0.202143137014514557,
+            -0.156387050011859596,
+            0.047476878333309942,
+            0.077958103121855915,
+            -0.217334854216428036,
+            0.077958103121855915,
+            -0.237197828922049295,
+            0.047476878333309942,
+            -0.156387050011859596,
+            0.202143137014514557,
+            0.052417975744997715,
+            0.054789293427501641,
+            0.056276640904364281,
+            -0.100053679877075558,
+            0.082401316690625129,
+            0.041644811759980006,
+        ]
+        super().__init__(
+            order=order,
+            cycles=cycles,
+            c_vec=c_vec,
+            reps=reps,
+            merge_single=merge_single,
+            merge_steps=merge_steps,
+            insert_barriers=insert_barriers,
+            cx_structure=cx_structure,
+            atomic_evolution=atomic_evolution,
+            wrap=wrap,
+            preserve_order=preserve_order,
+            atomic_evolution_sparse_observable=atomic_evolution_sparse_observable,
+        )
+
+
+class Malezic_Ostmeyer8_q21_minimal(OmelyanTrotter):
+    r"""Eighth-order Yoshida-type composite scheme at q = 21 cycles,
+    found by Maležič and Ostmeyer [1].
+
+    This is the Omelyan improved eighth-order Trotter scheme with twenty-one cycles.
+    In this region of cycles only composite schemes of Yoshida-type are allowed,
+    and this scheme is the most uniform in this region, with a small distance
+    from the origin.
+
+    References:
+        [1]: M. Maležič and J. Ostmeyer, "", 2026.
+             `arXiv:quant-ph/ <https://arxiv.org/abs/>`_
+
+    See also:
+        OmelyanTrotter
+        Malezic_Ostmeyer6
+        Malezic_Ostmeyer8_q21
+    """
+
+    def __init__(
+        self,
+        reps=1,
+        merge_single=True,
+        merge_steps=True,
+        insert_barriers=False,
+        cx_structure="chain",
+        atomic_evolution=None,
+        wrap=False,
+        preserve_order=True,
+        *,
+        atomic_evolution_sparse_observable=False,
+    ):
+        order = 8
+        cycles = 21
+        c_vec = [
+            0.046821019583626999,
+            0.065094747922117141,
+            0.179526744281134160,
+            -0.123740270767225768,
+            -0.119655652043950497,
+            0.046873313877776816,
+            0.058109443320545039,
+            0.063312160977716025,
+            0.067101081641059754,
+            0.063734886837763863,
+            -0.194354951261127062,
+            0.063734886837763863,
+            -0.237197828922049295,
+            0.067101081641059754,
+            0.063312160977716025,
+            0.058109443320545039,
+            0.046873313877776816,
+            -0.119655652043950497,
+            -0.123740270767225768,
+            0.179526744281134160,
+            0.065094747922117141,
+            0.046821019583626999,
+        ]
+        super().__init__(
+            order=order,
+            cycles=cycles,
+            c_vec=c_vec,
+            reps=reps,
+            merge_single=merge_single,
+            merge_steps=merge_steps,
+            insert_barriers=insert_barriers,
+            cx_structure=cx_structure,
+            atomic_evolution=atomic_evolution,
+            wrap=wrap,
+            preserve_order=preserve_order,
+            atomic_evolution_sparse_observable=atomic_evolution_sparse_observable,
+        )
+
+
+class Malezic_Ostmeyer8_q25(OmelyanTrotter):
+    r"""Eighth-order Yoshida-type composite scheme at q = 25 cycles,
+    found by Maležič and Ostmeyer [1].
+
+    This is the Omelyan improved eighth-order Trotter scheme with twenty-five cycles.
+    In this region of cycles only composite schemes of Yoshida-type are allowed,
+    and this scheme is one of the most efficient in this region, with a small distance
+    from the origin, making it a good candidate as a general product formula.
+
+    References:
+        [1]: M. Maležič and J. Ostmeyer, "", 2026.
+             `arXiv:quant-ph/ <https://arxiv.org/abs/>`_
+
+    See also:
+        OmelyanTrotter
+        Malezic_Ostmeyer6
+        Malezic_Ostmeyer8_q21
+        Malezic_Ostmeyer8_q30
+    """
+
+    def __init__(
+        self,
+        reps=1,
+        merge_single=True,
+        merge_steps=True,
+        insert_barriers=False,
+        cx_structure="chain",
+        atomic_evolution=None,
+        wrap=False,
+        preserve_order=True,
+        *,
+        atomic_evolution_sparse_observable=False,
+    ):
+        order = 8
+        cycles = 25
+        c_vec = [
+            0.035040437439599538,
+            0.083654200180512575,
+            -0.094441856492887166,
+            0.045282684942868918,
+            0.042686399911943541,
+            0.039337289378021986,
+            0.040200947014508506,
+            0.189095614596034745,
+            -0.147573727016947265,
+            0.029161512527994420,
+            0.080819932709682712,
+            0.008242786742480780,
+            -0.203012443867626569,
+            0.008242786742480780,
+            0.080819932709682712,
+            0.029161512527994420,
+            -0.147573727016947265,
+            0.189095614596034745,
+            0.040200947014508506,
+            0.039337289378021986,
+            0.042686399911943541,
+            0.045282684942868918,
+            -0.094441856492887166,
+            0.083654200180512575,
+            0.035040437439599538,
+        ]
+        super().__init__(
+            order=order,
+            cycles=cycles,
+            c_vec=c_vec,
+            reps=reps,
+            merge_single=merge_single,
+            merge_steps=merge_steps,
+            insert_barriers=insert_barriers,
+            cx_structure=cx_structure,
+            atomic_evolution=atomic_evolution,
+            wrap=wrap,
+            preserve_order=preserve_order,
+            atomic_evolution_sparse_observable=atomic_evolution_sparse_observable,
+        )
+
+
+class Malezic_Ostmeyer8_q30(OmelyanTrotter):
+    r"""Eighth-order generic scheme at q = 30 cycles,
+    found by Maležič and Ostmeyer [1].
+
+    This is the Omelyan improved eighth-order Trotter scheme with thirty cycles.
+    In this region of cycles generic schemes exist too, which allow for improvements.
+    At maximal number of cycles this scheme is highly efficient, and has a low distance
+    from the origin. In both respects however, it is worse than the scheme at q=21 cycles
+
+    References:
+        [1]: M. Maležič and J. Ostmeyer, "", 2026.
+             `arXiv:quant-ph/ <https://arxiv.org/abs/>`_
+
+    See also:
+        OmelyanTrotter
+        Malezic_Ostmeyer6
+        Malezic_Ostmeyer8_q21
+    """
+
+    def __init__(
+        self,
+        reps=1,
+        merge_single=True,
+        merge_steps=True,
+        insert_barriers=False,
+        cx_structure="chain",
+        atomic_evolution=None,
+        wrap=False,
+        preserve_order=True,
+        *,
+        atomic_evolution_sparse_observable=False,
+    ):
+        order = 8
+        cycles = 30
+        c_vec = [
+            0.026395999625833815,
+            -0.233684379758421046,
+            -0.347051470763567071,
+            -0.274493109455153539,
+            0.061094592879806627,
+            0.080452813774411269,
+            -0.063568811420699228,
+            0.079026700770564284,
+            0.059258569653719090,
+            0.101028778330863239,
+            -0.164724202482292914,
+            -0.153554503905898948,
+            0.107485850556923307,
+            -0.132867087173779791,
+            -0.074760981570922924,
+            0.153609834123292238,
+            0.024200829485005276,
+            -0.155771661397294425,
+            0.089897001564395437,
+            0.185309492367605244,
+            0.093200666104659380,
+            0.092333475195637504,
+            0.050724396546212469,
+            0.057234606768893276,
+            -0.114753172414141125,
+            0.033620005282797918,
+            0.217672800411770034,
+            0.344599868646588370,
+            0.286949675877411436,
+            0.071133422375779604,
         ]
         super().__init__(
             order=order,
