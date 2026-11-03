@@ -552,7 +552,7 @@ class Malezic_Ostmeyer6(OmelyanTrotter):
 
 
 class Malezic_Ostmeyer6_minimal(OmelyanTrotter):
-    r"""Sixth-order maximal cycles scheme with improved efficiency,
+    r"""Sixth-order maximal cycles scheme with uniformity,
     found by Maležič and Ostmeyer [1].
 
     This is the Omelyan improved sixth-order Trotter scheme with fourteen cycles.
@@ -695,7 +695,7 @@ class Morales8(OmelyanTrotter):
 
 
 class Malezic_Ostmeyer8_q21(OmelyanTrotter):
-    r"""Eighth-order Yoshida-type composite scheme at q = 21 cycles,
+    r"""Eighth-order efficient Yoshida-type composite scheme at q = 21 cycles,
     found by Maležič and Ostmeyer [1].
 
     This is the Omelyan improved eighth-order Trotter scheme with twenty-one cycles.
@@ -743,7 +743,6 @@ class Malezic_Ostmeyer8_q21(OmelyanTrotter):
             0.077958103121855915,
             -0.217334854216428036,
             0.077958103121855915,
-            -0.237197828922049295,
             0.047476878333309942,
             -0.156387050011859596,
             0.202143137014514557,
@@ -817,7 +816,6 @@ class Malezic_Ostmeyer8_q21_minimal(OmelyanTrotter):
             0.063734886837763863,
             -0.194354951261127062,
             0.063734886837763863,
-            -0.237197828922049295,
             0.067101081641059754,
             0.063312160977716025,
             0.058109443320545039,
@@ -929,7 +927,7 @@ class Malezic_Ostmeyer8_q30(OmelyanTrotter):
     This is the Omelyan improved eighth-order Trotter scheme with thirty cycles.
     In this region of cycles generic schemes exist too, which allow for improvements.
     At maximal number of cycles this scheme is highly efficient, and has a low distance
-    from the origin. In both respects however, it is worse than the scheme at q=21 cycles
+    from the origin. In both respects however, it is worse than the scheme at q = 30 cycles.
 
     References:
         [1]: M. Maležič and J. Ostmeyer, "", 2026.

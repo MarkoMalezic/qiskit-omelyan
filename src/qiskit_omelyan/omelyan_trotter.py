@@ -88,8 +88,9 @@ class OmelyanTrotter(ProductFormula):
               and Applied Mathematics, vol. 142, no. 2, pp. 313-330, 2002.
               DOI: `10.1016/S0377-0427(01)00492-7 <https://doi.org/10.1016/S0377-0427(01)00492-7>`_
          [8]: M. Maležič and J. Ostmeyer, "Efficient Trotter–Suzuki Schemes
-              for Long-Time Quantum Dynamics", 2026.
-              `arXiv:quant-ph/2601.18756 <https://arxiv.org/abs/2601.18756>`_
+              for Long-Time Quantum Dynamics", Journal of Physics A: Mathematical and
+              Theoretical 59, 345301 (2026)
+              DOI: `10.1088/1751-8121/ae919f <https://doi.org/10.1088/1751-8121/ae919f>`_
          [9]: M. E. S. Morales, P. C. S. Costa, D. K. Burgarth, Y. R. Sanders
               and D. W. Berry, "Greatly improved higher-order product formulae
               for quantum simulation", 2022.

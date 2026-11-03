@@ -25,8 +25,7 @@ def main():
     print("Methods for PauliEvolution:", pmgr.method_names("PauliEvolution"))
     print()
 
-    options = {"name": "custom_scheme",
-               "order": 4,
+    options = {"order": 4,
                "cycles": 4,
                "c_vec": [0.29977221161128875, 0.45107524582283487, 0.26510491209675635, -0.51595236953088],
                "reps": 1}
