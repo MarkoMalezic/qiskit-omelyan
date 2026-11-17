@@ -1,16 +1,18 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "qiskit-omelyan"
 version = "0.2.1"
-description = "Omelyan-based product formulas for time evolution in Qiskit"
+description = "Optimized Omelyan-type product formulas for Hamiltonian time evolution and circuit synthesis in Qiskit."
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 authors = [
     { name="Marko Maležič" }
 ]
 dependencies = [
-    "qiskit>=2.0.0"
+    "qiskit>=2.0.0,<3"
 ]
 readme = "README.md"
 requires-python = ">=3.10"
