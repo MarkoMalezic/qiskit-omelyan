@@ -1,8 +1,8 @@
 from qiskit.circuit import QuantumCircuit
 from qiskit.transpiler.passes.synthesis.plugin import HighLevelSynthesisPlugin
 from qiskit.circuit.library.pauli_evolution import PauliEvolutionGate
+from .omelyan_trotter import OmelyanTrotter
 from .omelyan_schemes import (
-    OmelyanTrotter,
     Leapfrog2,
     Omelyan2,
     Forest_Ruth4,

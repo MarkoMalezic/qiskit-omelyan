@@ -3,7 +3,7 @@
 This directory contains **standalone example scripts** that demonstrate how to use the
 `qiskit-omelyan` product-formula (Omelyan-type) schemes to build time-evolution circuits
 for a simple Heisenberg XXZ spin chain.
-In `examples/native` one finds examples that run natively inside the package, while in `examples/plugin` the similar tests are presented using the HighLevelSynthesis plugin for Qiskit.
+In `examples/native` one finds examples that run natively inside the package, while in `examples/plugin` similar tests are presented using the HighLevelSynthesis plugin for Qiskit.
 
 These examples are meant for **learning and experimentation**, not as automated unit tests.
 
@@ -23,12 +23,18 @@ pip install "qiskit-omelyan[examples] @ git+https://github.com/MarkoMalezic/qisk
 
 ## How to run
 
-These scripts are intended to be run **from inside the `examples/` directory**:
+These scripts are intended to be run **from inside the `examples/native/` or `examples/plugin/` directories**:
 
 ```bash
-cd examples
+cd examples/native/
 python leapfrog2_circuit.py
 python leapfrog2.py
+```
+
+```bash
+cd examples/plugin/
+python custom_scheme.py
+python named_scheme.py
 ```
 
 If you use a virtual environment, make sure it is activated before running the scripts.
