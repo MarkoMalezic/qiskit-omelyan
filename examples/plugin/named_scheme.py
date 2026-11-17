@@ -28,7 +28,7 @@ def main():
     named_schemes = ["leapfrog2", "omelyan2", "forest_ruth4", "omelyan4", "malezic_ostmeyer4",
                      "malezic_ostmeyer4_minimal", "yoshida6", "blanes_moan6", "malezic_ostmeyer6",
                      "malezic_ostmeyer6_minimal", "morales8", "malezic_ostmeyer8_q21",
-                     "malezic_ostmeyer8_q21_minimal", "malezic_ostmeyer8_q25", "malezic_ostmeyer8_q30",
+                     "malezic_ostmeyer8_q23", "malezic_ostmeyer8_q25", "malezic_ostmeyer8_q30",
                      "morales10"]
 
     options = {"name": named_schemes[0], # Change this to test different named schemes

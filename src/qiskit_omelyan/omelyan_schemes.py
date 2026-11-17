@@ -710,7 +710,7 @@ class Malezic_Ostmeyer8_q21(OmelyanTrotter):
     See also:
         OmelyanTrotter
         Malezic_Ostmeyer6
-        Malezic_Ostmeyer8_q21_minimal
+        Malezic_Ostmeyer8_q23
         Malezic_Ostmeyer8_q25
         Malezic_Ostmeyer8_q30
     """
@@ -769,14 +769,13 @@ class Malezic_Ostmeyer8_q21(OmelyanTrotter):
         )
 
 
-class Malezic_Ostmeyer8_q21_minimal(OmelyanTrotter):
-    r"""Eighth-order Yoshida-type composite scheme at q = 21 cycles,
+class Malezic_Ostmeyer8_q23(OmelyanTrotter):
+    r"""Eighth-order Yoshida-type composite scheme at q = 23 cycles,
     found by Maležič and Ostmeyer [1].
 
-    This is the Omelyan improved eighth-order Trotter scheme with twenty-one cycles.
+    This is the Omelyan improved eighth-order Trotter scheme with twenty-three cycles.
     In this region of cycles only composite schemes of Yoshida-type are allowed,
-    and this scheme is the most uniform in this region, with a small distance
-    from the origin.
+    and this scheme has good uniformity and efficiency.
 
     References:
         [1]: M. Maležič and J. Ostmeyer, "", 2026.
@@ -786,6 +785,7 @@ class Malezic_Ostmeyer8_q21_minimal(OmelyanTrotter):
         OmelyanTrotter
         Malezic_Ostmeyer6
         Malezic_Ostmeyer8_q21
+        Malezic_Ostmeyer8_q25
     """
 
     def __init__(
@@ -802,29 +802,31 @@ class Malezic_Ostmeyer8_q21_minimal(OmelyanTrotter):
         atomic_evolution_sparse_observable=False,
     ):
         order = 8
-        cycles = 21
+        cycles = 23
         c_vec = [
-            0.046821019583626999,
-            0.065094747922117141,
-            0.179526744281134160,
-            -0.123740270767225768,
-            -0.119655652043950497,
-            0.046873313877776816,
-            0.058109443320545039,
-            0.063312160977716025,
-            0.067101081641059754,
-            0.063734886837763863,
-            -0.194354951261127062,
-            0.063734886837763863,
-            0.067101081641059754,
-            0.063312160977716025,
-            0.058109443320545039,
-            0.046873313877776816,
-            -0.119655652043950497,
-            -0.123740270767225768,
-            0.179526744281134160,
-            0.065094747922117141,
-            0.046821019583626999,
+            0.035775813126863683,
+            0.082428855761252390,
+            -0.093558098054503130,
+            0.044803882268296111,
+            0.041609234548577574,
+            0.037205238783110939,
+            0.039574307245707777,
+            0.194301912776415037,
+            -0.151953430890394953,
+            0.040812082768358217,
+            0.083271171704635674,
+            -0.208541940076638649,
+            0.083271171704635674,
+            0.040812082768358217,
+            -0.151953430890394953,
+            0.194301912776415037,
+            0.039574307245707777,
+            0.037205238783110939,
+            0.041609234548577574,
+            0.044803882268296111,
+            -0.093558098054503130,
+            0.082428855761252390,
+            0.035775813126863683,
         ]
         super().__init__(
             order=order,
@@ -859,7 +861,7 @@ class Malezic_Ostmeyer8_q25(OmelyanTrotter):
         OmelyanTrotter
         Malezic_Ostmeyer6
         Malezic_Ostmeyer8_q21
-        Malezic_Ostmeyer8_q30
+        Malezic_Ostmeyer8_q23
     """
 
     def __init__(
@@ -878,31 +880,31 @@ class Malezic_Ostmeyer8_q25(OmelyanTrotter):
         order = 8
         cycles = 25
         c_vec = [
-            0.035040437439599538,
-            0.083654200180512575,
-            -0.094441856492887166,
-            0.045282684942868918,
-            0.042686399911943541,
-            0.039337289378021986,
-            0.040200947014508506,
-            0.189095614596034745,
-            -0.147573727016947265,
-            0.029161512527994420,
-            0.080819932709682712,
-            0.008242786742480780,
-            -0.203012443867626569,
-            0.008242786742480780,
-            0.080819932709682712,
-            0.029161512527994420,
-            -0.147573727016947265,
-            0.189095614596034745,
-            0.040200947014508506,
-            0.039337289378021986,
-            0.042686399911943541,
-            0.045282684942868918,
-            -0.094441856492887166,
-            0.083654200180512575,
-            0.035040437439599538,
+            0.047951181370257979,
+            0.058306285798459791,
+            0.081833806671706782,
+            -0.099767039618495923,
+            -0.081108207667039356
+            0.056506301170499422,
+            0.061992066674556361,
+            0.069082895721143928,
+            0.188059120467134577,
+            -0.142948183144266994,
+            0.050775495147567268,
+            0.060649773832167270,
+            -0.202666992847382155,
+            0.060649773832167270,
+            0.050775495147567268,
+            -0.142948183144266994,
+            0.188059120467134577,
+            0.069082895721143928,
+            0.061992066674556361,
+            0.056506301170499422,
+            -0.081108207667039356
+            -0.099767039618495923
+            0.081833806671706782,
+            0.058306285798459791,
+            0.047951181370257979,
         ]
         super().__init__(
             order=order,

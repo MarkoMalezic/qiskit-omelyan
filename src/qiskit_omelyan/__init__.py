@@ -12,7 +12,7 @@ from .omelyan_schemes import (
     Malezic_Ostmeyer6_minimal,
     Morales8,
     Malezic_Ostmeyer8_q21,
-    Malezic_Ostmeyer8_q21_minimal,
+    Malezic_Ostmeyer8_q23,
     Malezic_Ostmeyer8_q25,
     Malezic_Ostmeyer8_q30,
     Morales10,
@@ -33,7 +33,7 @@ __all__ = [
     "Malezic_Ostmeyer6_minimal",
     "Morales8",
     "Malezic_Ostmeyer8_q21",
-    "Malezic_Ostmeyer8_q21_minimal",
+    "Malezic_Ostmeyer8_q23",
     "Malezic_Ostmeyer8_q25",
     "Malezic_Ostmeyer8_q30",
     "Morales10"

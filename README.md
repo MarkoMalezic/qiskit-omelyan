@@ -32,7 +32,7 @@ This repository includes ready-to-use schemes implemented as subclasses/instance
 - **2nd order**: `Leapfrog2`, `Omelyan2`
 - **4th order**: `Forest_Ruth4`, `Omelyan4`, `Malezic_Ostmeyer4`, `Malezic_Ostmeyer4_minimal`
 - **6th order**: `Yoshida6`, `Blanes_Moan6`, `Malezic_Ostmeyer6`, `Malezic_Ostmeyer6_minimal`
-- **8th order**: `Morales8`, `Malezic_Ostmeyer8_q21`, `Malezic_Ostmeyer8_q21_minimal`, `Malezic_Ostmeyer8_q25`, `Malezic_Ostmeyer8_q30`
+- **8th order**: `Morales8`, `Malezic_Ostmeyer8_q21`, `Malezic_Ostmeyer8_q23`, `Malezic_Ostmeyer8_q25`, `Malezic_Ostmeyer8_q30`
 - **10th order**: `Morales10`
 
 ### Collection of schemes
