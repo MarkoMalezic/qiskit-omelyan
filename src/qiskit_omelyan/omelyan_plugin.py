@@ -45,8 +45,8 @@ class PauliEvolutionSynthesisOmelyan(HighLevelSynthesisPlugin):
         - cycles (int): Number of cycles in the product formula (for custom schemes).
         - c_vec (list of float): Coefficients for the product formula (for custom schemes).
         - reps (int, default=1): Number of repetitions (time steps).
-        - merge_single (bool, default=True): Merge identical single-qubit rotations within a step where possible.
-        - merge_steps (bool, default=True): Merge the gates at points where two consecutive steps meet.
+        - merge_single (bool, default=False): Merge identical single-qubit rotations within a step where possible.
+        - merge_steps (bool, default=False): Merge the gates at points where two consecutive steps meet.
         - insert_barriers (bool, default=False): Insert barriers between steps.
         - cx_structure (str, default="chain"): Structure for CX gates ("chain" or "fountain").
         - atomic_evolution (callable or None, default=None): Custom function for atomic evolutions (advanced).
@@ -83,8 +83,8 @@ class PauliEvolutionSynthesisOmelyan(HighLevelSynthesisPlugin):
         # Options shared by all schemes, with the same defaults as the scheme classes
         scheme_options = {
             "reps": options.get("reps", 1),
-            "merge_single": options.get("merge_single", True),
-            "merge_steps": options.get("merge_steps", True),
+            "merge_single": options.get("merge_single", False),
+            "merge_steps": options.get("merge_steps", False),
             "insert_barriers": options.get("insert_barriers", False),
             "cx_structure": options.get("cx_structure", "chain"),
             "atomic_evolution": options.get("atomic_evolution"),

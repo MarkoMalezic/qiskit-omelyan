@@ -319,8 +319,8 @@ class Malezic_Ostmeyer4_minimal(OmelyanTrotter):
     def __init__(
         self,
         reps=1,
-        merge_single=True,
-        merge_steps=True,
+        merge_single=False,
+        merge_steps=False,
         insert_barriers=False,
         cx_structure="chain",
         atomic_evolution=None,
@@ -577,8 +577,8 @@ class Malezic_Ostmeyer6_minimal(OmelyanTrotter):
     def __init__(
         self,
         reps=1,
-        merge_single=True,
-        merge_steps=True,
+        merge_single=False,
+        merge_steps=False,
         insert_barriers=False,
         cx_structure="chain",
         atomic_evolution=None,
@@ -718,8 +718,8 @@ class Malezic_Ostmeyer8_q21(OmelyanTrotter):
     def __init__(
         self,
         reps=1,
-        merge_single=True,
-        merge_steps=True,
+        merge_single=False,
+        merge_steps=False,
         insert_barriers=False,
         cx_structure="chain",
         atomic_evolution=None,
@@ -791,8 +791,8 @@ class Malezic_Ostmeyer8_q23(OmelyanTrotter):
     def __init__(
         self,
         reps=1,
-        merge_single=True,
-        merge_steps=True,
+        merge_single=False,
+        merge_steps=False,
         insert_barriers=False,
         cx_structure="chain",
         atomic_evolution=None,
@@ -867,8 +867,8 @@ class Malezic_Ostmeyer8_q25(OmelyanTrotter):
     def __init__(
         self,
         reps=1,
-        merge_single=True,
-        merge_steps=True,
+        merge_single=False,
+        merge_steps=False,
         insert_barriers=False,
         cx_structure="chain",
         atomic_evolution=None,
@@ -884,7 +884,7 @@ class Malezic_Ostmeyer8_q25(OmelyanTrotter):
             0.058306285798459791,
             0.081833806671706782,
             -0.099767039618495923,
-            -0.081108207667039356
+            -0.081108207667039356,
             0.056506301170499422,
             0.061992066674556361,
             0.069082895721143928,
@@ -900,8 +900,8 @@ class Malezic_Ostmeyer8_q25(OmelyanTrotter):
             0.069082895721143928,
             0.061992066674556361,
             0.056506301170499422,
-            -0.081108207667039356
-            -0.099767039618495923
+            -0.081108207667039356,
+            -0.099767039618495923,
             0.081833806671706782,
             0.058306285798459791,
             0.047951181370257979,
@@ -929,7 +929,7 @@ class Malezic_Ostmeyer8_q30(OmelyanTrotter):
     This is the Omelyan improved eighth-order Trotter scheme with thirty cycles.
     In this region of cycles generic schemes exist too, which allow for improvements.
     At maximal number of cycles this scheme is highly efficient, and has a low distance
-    from the origin. In both respects however, it is worse than the scheme at q = 30 cycles.
+    from the origin.
 
     References:
         [1]: M. Maležič and J. Ostmeyer, "", 2026.
@@ -944,8 +944,8 @@ class Malezic_Ostmeyer8_q30(OmelyanTrotter):
     def __init__(
         self,
         reps=1,
-        merge_single=True,
-        merge_steps=True,
+        merge_single=False,
+        merge_steps=False,
         insert_barriers=False,
         cx_structure="chain",
         atomic_evolution=None,

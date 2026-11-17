@@ -29,3 +29,6 @@ package-dir = {"" = "src"}
 
 [project.entry-points."qiskit.synthesis"]
 "PauliEvolution.omelyan_trotter" = "qiskit_omelyan.omelyan_plugin:PauliEvolutionSynthesisOmelyan"
+
+[project.urls]
+Repository = "https://github.com/MarkoMalezic/qiskit-omelyan"

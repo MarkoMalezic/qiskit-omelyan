@@ -46,7 +46,7 @@ def test_plugin_forwards_merge_options(merge_single, merge_steps):
 
 def test_plugin_custom_scheme():
     qc_plugin = PauliEvolutionSynthesisOmelyan().run(EVO, reps=2, **CUSTOM)
-    qc_direct = OmelyanTrotter(**CUSTOM, reps=2, merge_single=True, merge_steps=True).synthesize(EVO)
+    qc_direct = OmelyanTrotter(**CUSTOM, reps=2).synthesize(EVO)
 
     assert qc_plugin == qc_direct
 
