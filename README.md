@@ -26,6 +26,7 @@ The implementation integrates with Qiskit’s existing operator and synthesis st
   - merging boundaries between consecutive steps (`merge_steps`)
 
 This makes it possible to implement a broad family of symmetric product formulas in a uniform way and to reproduce known optimized schemes from the literature.
+The algorithm used to implement such Omelyan-type schemes as circuits is described in our Lattice 2025 proceedings, Maležič & Ostmeyer ([arXiv:2602.21145](https://arxiv.org/abs/2602.21145)).
 
 ### Built-in schemes
 
@@ -39,7 +40,7 @@ This repository includes ready-to-use schemes implemented as subclasses/instance
 
 ### Collection of schemes
 
-All top most efficient schemes at orders $n = 2, 4, 6, 8$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the paper by Maležič & Ostmeyer ([10.1088/1751-8121/ae919f](https://doi.org/10.1088/1751-8121/ae919f)) and ([arXiv: ](https://arxiv.org/abs/))
+All top most efficient schemes at orders $n = 2, 4, 6, 8$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the papers by Maležič & Ostmeyer ([10.1088/1751-8121/ae919f](https://doi.org/10.1088/1751-8121/ae919f), [arXiv:2601.18756](https://arxiv.org/abs/2601.18756)) and ([arXiv: ](https://arxiv.org/abs/))
 
 ## Installation
 
@@ -155,7 +156,8 @@ The schemes in this repository are designed to be comparable to existing Qiskit 
 - M. E. S. Morales, P. C. S. Costa, D. K. Burgarth, Y. R. Sanders, D. W. Berry, *Greatly improved higher-order product formulae for quantum simulation* (2022)
 - J. Ostmeyer, *Optimised Trotter decompositions for Classical and Quantum Computing* (2023)
 - M. Maležič and J. Ostmeyer, *Efficient Trotter–Suzuki Schemes for Long-Time Quantum Dynamics* (2026)
-- M. Maležič and J. Ostmeyer, ** (2026)
+- M. Maležič and J. Ostmeyer, *Reducing the Gate Count with Efficient Trotter–Suzuki Schemes*, Proceedings of Lattice 2025 (2026)
+- M. Maležič and J. Ostmeyer, *Optimised 8th-order Trotter–Suzuki schemes for Quantum simulation* (2026)
 
 ## License
 
