@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+message: "If you use qiskit-omelyan, please cite the paper below as well as the software."
+type: software
+title: "qiskit-omelyan"
+version: "1.0.0"
+abstract: >-
+  Omelyan-type (and related) symmetric product formulas for Hamiltonian time evolution in Qiskit.
+  Provides a general ramp-based construction, OmelyanTrotter, a collection of optimized schemes from the
+  literature, and a HighLevelSynthesis plugin for PauliEvolutionGate.
+authors:
+  - given-names: Marko
+    family-names: Maležič
+    orcid: "https://orcid.org/0009-0005-5863-9223"
+    affiliation: "University of Bonn, Helmholtz Institute for Radiation and Nuclear Physics"
+repository-code: "https://github.com/MarkoMalezic/qiskit-omelyan"
+url: "https://pypi.org/project/qiskit-omelyan/"
+license: Apache-2.0
+keywords:
+  - Qiskit
+  - Trotter-Suzuki decomposition
+  - product formulas
+  - Hamiltonian simulation
+  - quantum circuits
+preferred-citation:
+  type: article
+  title: "Optimised 8th-order Trotter-Suzuki schemes for Quantum simulation"
+  authors:
+    - given-names: Marko
+      family-names: Maležič
+    - given-names: Johann
+      family-names: Ostmeyer
+  year: 2026
+references:
+  - type: conference-paper
+    title: "Reducing the Gate Count with Efficient Trotter-Suzuki Schemes"
+    authors:
+      - given-names: Marko
+        family-names: Maležič
+      - given-names: Johann
+        family-names: Ostmeyer
+    conference:
+      name: "42nd International Symposium on Lattice Field Theory (Lattice 2025)"
+    identifiers:
+      - type: other
+        value: "arXiv:2602.21145"
+        description: "arXiv preprint"
+  - type: article
+    title: "Efficient Trotter-Suzuki Schemes for Long-time Quantum Dynamics"
+    authors:
+      - given-names: Marko
+        family-names: Maležič
+      - given-names: Johann
+        family-names: Ostmeyer
+    journal: "Journal of Physics A: Mathematical and Theoretical"
+    doi: "10.1088/1751-8121/ae919f"
+    identifiers:
+      - type: other
+        value: "arXiv:2601.18756"
+        description: "arXiv preprint"
