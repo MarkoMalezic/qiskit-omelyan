@@ -1,6 +1,7 @@
 # qiskit-omelyan
 
 [![Qiskit Ecosystem](https://qisk.it/e-9d474247)](https://qisk.it/e)
+[![DOI](https://zenodo.org/badge/1218195160.svg)](https://doi.org/10.5281/zenodo.24371684)
 
 Omelyan-type (and related) **symmetric product formulas** for Hamiltonian time evolution in Qiskit.
 
