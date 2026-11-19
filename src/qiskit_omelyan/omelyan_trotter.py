@@ -43,8 +43,8 @@ class OmelyanTrotter(ProductFormula):
 
     The scheme parameters can be derived and optimized to improve the error
     accumulated during the evolution. Many of these schemes are already known
-    and the values of their parameters can be found in the literature [1–9]
-    (see Ref. [10] for a trove of schemes at orders n = 4, 6).
+    and the values of their parameters can be found in the literature [1–10]
+    (see Ref. [12] for a trove of schemes at orders n = 2, 4, 6, 8).
     For convenience, some of the most efficient schemes known are implemented
     as derivatives of this class.
     The scheme parameters are symmetric, which results in even orders n.
@@ -55,7 +55,7 @@ class OmelyanTrotter(ProductFormula):
     Due to the properties of such a notation the sum of all parameters c_k
     should be equal to 1/2, otherwise the scheme becomes invalid.
 
-    The implementation is optimized for circuit efficiency. Gates corresponding
+    The implementation is optimized for circuit efficiency [11]. Gates corresponding
     to identical operators with different factors are merged within a step.
     Additionally, the implementation allows merging of single-qubit gates
     where possible, as well as consolidation of repeated steps.
@@ -95,9 +95,16 @@ class OmelyanTrotter(ProductFormula):
               and D. W. Berry, "Greatly improved higher-order product formulae
               for quantum simulation", 2022.
               `arXiv:quant-ph/2210.15817 <https://arxiv.org/abs/2210.15817>`_
-        [10]: M. Maležič, "MarkoMalezic/efficient-trotterizations", version v1.0,
+        [10]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
+              schemes for Quantum simulation", 2026.
+              arXiv preprint to follow.
+        [11]: M. Maležič and J. Ostmeyer, "Reducing the Gate Count with Efficient
+              Trotter–Suzuki Schemes", Proceedings of the 42nd International
+              Symposium on Lattice Field Theory (Lattice 2025), 2026.
+              `arXiv:2602.21145 <https://arxiv.org/abs/2602.21145>`_
+        [12]: M. Maležič, "MarkoMalezic/efficient-trotterizations",
               Github: `MarkoMalezic/efficient-trotterizations <https://github.com/MarkoMalezic/efficient-trotterizations>`_
-              Zenodo DOI: `10.5281/18347430 <https://doi.org/10.5281/zenodo.18347430>`_
+              Zenodo DOI (all versions): `10.5281/zenodo.18347429 <https://doi.org/10.5281/zenodo.18347429>`_
     """
 
     def __init__(

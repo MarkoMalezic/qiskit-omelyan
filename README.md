@@ -40,7 +40,7 @@ This repository includes ready-to-use schemes implemented as subclasses/instance
 
 ### Collection of schemes
 
-All top most efficient schemes at orders $n = 2, 4, 6, 8$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the papers by Maležič & Ostmeyer ([10.1088/1751-8121/ae919f](https://doi.org/10.1088/1751-8121/ae919f), [arXiv:2601.18756](https://arxiv.org/abs/2601.18756)) and ([arXiv: ](https://arxiv.org/abs/))
+All top most efficient schemes at orders $n = 2, 4, 6, 8$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the papers by Maležič & Ostmeyer, *Efficient Trotter–Suzuki Schemes for Long-Time Quantum Dynamics* ([10.1088/1751-8121/ae919f](https://doi.org/10.1088/1751-8121/ae919f), [arXiv:2601.18756](https://arxiv.org/abs/2601.18756)) and *Optimised 8th-order Trotter–Suzuki schemes for Quantum simulation* (arXiv preprint to follow).
 
 ## Installation
 
