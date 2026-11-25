@@ -95,9 +95,9 @@ class OmelyanTrotter(ProductFormula):
               and D. W. Berry, "Greatly improved higher-order product formulae
               for quantum simulation", 2022.
               `arXiv:quant-ph/2210.15817 <https://arxiv.org/abs/2210.15817>`_
-        [10]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-              schemes for Quantum simulation", 2026.
-              arXiv preprint to follow.
+        [10]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+              Schemes for Quantum Simulation", 2026.
+              `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
         [11]: M. Maležič and J. Ostmeyer, "Reducing the Gate Count with Efficient
               Trotter–Suzuki Schemes", Proceedings of the 42nd International
               Symposium on Lattice Field Theory (Lattice 2025), 2026.

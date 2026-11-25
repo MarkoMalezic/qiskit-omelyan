@@ -5,7 +5,7 @@
 
 Omelyan-type (and related) **symmetric product formulas** for Hamiltonian time evolution in Qiskit.
 
-This project provides a general ramp-based construction, **`OmelyanTrotter`**, along with a collection of well-known optimized schemes from the literature. The goal is to give you more control over time-evolution circuit synthesis—especially when you want **lower Trotter error at fixed (or comparable) gate depth** than standard Suzuki–Trotter constructions.
+This project provides a general ramp-based construction, **`OmelyanTrotter`**, along with a collection of well-known optimised schemes from the literature. The goal is to give you more control over time-evolution circuit synthesis—especially when you want **lower Trotter error at fixed (or comparable) gate depth** than standard Suzuki–Trotter constructions.
 
 The implementation integrates with Qiskit’s existing operator and synthesis stack:
 - `SparsePauliOp` for representing Hamiltonians
@@ -22,11 +22,11 @@ The implementation integrates with Qiskit’s existing operator and synthesis st
 - **cycles** (`cycles`)
 - **symmetric parameter vectors** (`c_vec`)
 - **multiple steps** (`reps`)
-- optional circuit optimizations:
+- optional circuit optimisations:
   - merging consecutive identical single-qubit rotations (`merge_single`)
   - merging boundaries between consecutive steps (`merge_steps`)
 
-This makes it possible to implement a broad family of symmetric product formulas in a uniform way and to reproduce known optimized schemes from the literature.
+This makes it possible to implement a broad family of symmetric product formulas in a uniform way and to reproduce known optimised schemes from the literature.
 The algorithm used to implement such Omelyan-type schemes as circuits is described in our Lattice 2025 proceedings, Maležič & Ostmeyer ([arXiv:2602.21145](https://arxiv.org/abs/2602.21145)).
 
 ### Built-in schemes
@@ -41,7 +41,7 @@ This repository includes ready-to-use schemes implemented as subclasses/instance
 
 ### Collection of schemes
 
-All top most efficient schemes at orders $n = 2, 4, 6, 8$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the papers by Maležič & Ostmeyer, *Efficient Trotter–Suzuki Schemes for Long-Time Quantum Dynamics* ([10.1088/1751-8121/ae919f](https://doi.org/10.1088/1751-8121/ae919f), [arXiv:2601.18756](https://arxiv.org/abs/2601.18756)) and *Optimised 8th-order Trotter–Suzuki schemes for Quantum simulation* (arXiv preprint to follow).
+All top most efficient schemes at orders $n = 2, 4, 6, 8$ are collected in the repository: https://github.com/MarkoMalezic/efficient-trotterizations. These are based on the papers by Maležič & Ostmeyer, *Efficient Trotter–Suzuki Schemes for Long-Time Quantum Dynamics* ([10.1088/1751-8121/ae919f](https://doi.org/10.1088/1751-8121/ae919f), [arXiv:2601.18756](https://arxiv.org/abs/2601.18756)) and *Optimised 8th-Order Trotter–Suzuki Schemes for Quantum Simulation* ([arXiv:2611.27896](https://arxiv.org/abs/2611.27896)).
 
 ## Installation
 
@@ -158,7 +158,7 @@ The schemes in this repository are designed to be comparable to existing Qiskit 
 - J. Ostmeyer, *Optimised Trotter decompositions for Classical and Quantum Computing* (2023)
 - M. Maležič and J. Ostmeyer, *Efficient Trotter–Suzuki Schemes for Long-Time Quantum Dynamics* (2026)
 - M. Maležič and J. Ostmeyer, *Reducing the Gate Count with Efficient Trotter–Suzuki Schemes*, Proceedings of Lattice 2025 (2026)
-- M. Maležič and J. Ostmeyer, *Optimised 8th-order Trotter–Suzuki schemes for Quantum simulation* (2026)
+- M. Maležič and J. Ostmeyer, *Optimised 8th-Order Trotter–Suzuki Schemes for Quantum Simulation* (2026), [arXiv:2611.27896](https://arxiv.org/abs/2611.27896)
 
 ## License
 

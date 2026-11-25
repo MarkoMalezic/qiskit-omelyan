@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "qiskit-omelyan"
-version = "1.0.0"
-description = "Optimized Omelyan-type product formulas for Hamiltonian time evolution and circuit synthesis in Qiskit."
+version = "1.0.1"
+description = "Optimised Omelyan-type product formulas for Hamiltonian time evolution and circuit synthesis in Qiskit."
 license = "Apache-2.0"
 license-files = ["LICENSE"]
 authors = [

@@ -2,11 +2,17 @@ cff-version: 1.2.0
 message: "If you use qiskit-omelyan, please cite the paper below as well as the software."
 type: software
 title: "qiskit-omelyan"
-version: "1.0.0"
+version: "1.0.1"
 abstract: >-
   Omelyan-type (and related) symmetric product formulas for Hamiltonian time evolution in Qiskit.
-  Provides a general ramp-based construction, OmelyanTrotter, a collection of optimized schemes from the
-  literature, and a HighLevelSynthesis plugin for PauliEvolutionGate.
+  Provides a general ramp-based construction, OmelyanTrotter, which implements symmetric product formulas
+  of any even order and number of cycles, with optional merging of single-qubit rotations and of
+  consecutive steps to reduce the gate count. It includes a collection of optimised schemes from the
+  literature (Leapfrog, Omelyan, Forest-Ruth, Yoshida, Blanes-Moan and Morales) and the efficient schemes
+  of Maležič and Ostmeyer at orders 4, 6 and 8, and registers a HighLevelSynthesis plugin
+  (omelyan_trotter) for PauliEvolutionGate, so the schemes can be used directly in Qiskit's transpiler.
+  The construction is described in arXiv:2602.21145, and the schemes and their application to noisy
+  quantum circuits in arXiv:2601.18756 and arXiv:2611.27896.
 authors:
   - given-names: Marko
     family-names: Maležič
@@ -23,13 +29,18 @@ keywords:
   - quantum circuits
 preferred-citation:
   type: article
-  title: "Optimised 8th-order Trotter-Suzuki schemes for Quantum simulation"
+  title: "Optimised 8th-Order Trotter-Suzuki Schemes for Quantum Simulation"
   authors:
     - given-names: Marko
       family-names: Maležič
     - given-names: Johann
       family-names: Ostmeyer
   year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2611.27896"
+      description: "arXiv preprint"
+  url: "https://arxiv.org/abs/2611.27896"
 references:
   - type: conference-paper
     title: "Reducing the Gate Count with Efficient Trotter-Suzuki Schemes"

@@ -307,9 +307,9 @@ class Malezic_Ostmeyer4_minimal(OmelyanTrotter):
     comes at a cost of decreased efficiency.
 
     References:
-        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-             schemes for Quantum simulation", 2026.
-             arXiv preprint to follow.
+        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+             Schemes for Quantum Simulation", 2026.
+             `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
 
     See also:
         OmelyanTrotter
@@ -566,9 +566,9 @@ class Malezic_Ostmeyer6_minimal(OmelyanTrotter):
     comes at a cost of decreased efficiency.
 
     References:
-        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-             schemes for Quantum simulation", 2026.
-             arXiv preprint to follow.
+        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+             Schemes for Quantum Simulation", 2026.
+             `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
 
     See also:
         OmelyanTrotter
@@ -706,9 +706,9 @@ class Malezic_Ostmeyer8_q21(OmelyanTrotter):
     from the origin, making it a good candidate as a general product formula.
 
     References:
-        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-             schemes for Quantum simulation", 2026.
-             arXiv preprint to follow.
+        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+             Schemes for Quantum Simulation", 2026.
+             `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
 
     See also:
         OmelyanTrotter
@@ -781,9 +781,9 @@ class Malezic_Ostmeyer8_q23(OmelyanTrotter):
     and this scheme has good uniformity and efficiency.
 
     References:
-        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-             schemes for Quantum simulation", 2026.
-             arXiv preprint to follow.
+        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+             Schemes for Quantum Simulation", 2026.
+             `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
 
     See also:
         OmelyanTrotter
@@ -858,9 +858,9 @@ class Malezic_Ostmeyer8_q25(OmelyanTrotter):
     from the origin, making it a good candidate as a general product formula.
 
     References:
-        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-             schemes for Quantum simulation", 2026.
-             arXiv preprint to follow.
+        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+             Schemes for Quantum Simulation", 2026.
+             `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
 
     See also:
         OmelyanTrotter
@@ -937,9 +937,9 @@ class Malezic_Ostmeyer8_q30(OmelyanTrotter):
     from the origin.
 
     References:
-        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-order Trotter–Suzuki
-             schemes for Quantum simulation", 2026.
-             arXiv preprint to follow.
+        [1]: M. Maležič and J. Ostmeyer, "Optimised 8th-Order Trotter–Suzuki
+             Schemes for Quantum Simulation", 2026.
+             `arXiv:2611.27896 <https://arxiv.org/abs/2611.27896>`_
 
     See also:
         OmelyanTrotter
